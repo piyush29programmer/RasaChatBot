@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/kumpiy02/Documents/RasaProject/RasaDemo/models/nlu/component_5_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "/home/kumpiy02/Documents/RasaProject/RasaDemo/models/nlu/component_5_EmbeddingIntentClassifier.ckpt"

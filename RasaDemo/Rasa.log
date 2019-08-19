@@ -1,0 +1,66 @@
+DEBUG:rasa.nlu.training_data.loading:Training data format of './data/data.json' is 'rasa_nlu'.
+DEBUG:rasa.nlu.training_data.training_data:Validating training data...
+INFO:rasa.nlu.model:Starting to train component WhitespaceTokenizer
+INFO:rasa.nlu.model:Finished training component.
+INFO:rasa.nlu.model:Starting to train component RegexFeaturizer
+INFO:rasa.nlu.model:Finished training component.
+INFO:rasa.nlu.model:Starting to train component CRFEntityExtractor
+INFO:rasa.nlu.model:Finished training component.
+INFO:rasa.nlu.model:Starting to train component EntitySynonymMapper
+INFO:rasa.nlu.model:Finished training component.
+INFO:rasa.nlu.model:Starting to train component CountVectorsFeaturizer
+INFO:rasa.nlu.model:Finished training component.
+INFO:rasa.nlu.model:Starting to train component EmbeddingIntentClassifier
+DEBUG:rasa.nlu.classifiers.embedding_intent_classifier:Check if num_neg 20 is smaller than number of intents 3, else set num_neg to the number of intents - 1
+WARNING:tensorflow:From /usr/local/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py:290: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.6/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py:292: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+INFO:rasa.nlu.classifiers.embedding_intent_classifier:Accuracy is updated every 10 epochs
+INFO:rasa.nlu.classifiers.embedding_intent_classifier:Finished training embedding classifier, loss=0.070, train accuracy=1.000
+INFO:rasa.nlu.model:Finished training component.
+INFO:rasa.nlu.model:Successfully saved model into '/home/kumpiy02/Documents/RasaProject/RasaDemo/models/nlu'
+DEBUG:pykwalify.compat:Using yaml library: /usr/local/lib64/python3.6/site-packages/ruamel/yaml/__init__.py
+WARNING:rasa.core.domain:Deprecated: Templates should not be strings anymore. Utterance template 'utter_greet' should contain either '- text: ' or '- custom: ' attribute to be a proper template.
+WARNING:rasa.core.domain:Deprecated: Templates should not be strings anymore. Utterance template 'utter_goodbye' should contain either '- text: ' or '- custom: ' attribute to be a proper template.
+WARNING:rasa.core.domain:Deprecated: Templates should not be strings anymore. Utterance template 'utter_goodbye' should contain either '- text: ' or '- custom: ' attribute to be a proper template.
+WARNING:rasa.core.domain:Deprecated: Templates should not be strings anymore. Utterance template 'utter_ask_location' should contain either '- text: ' or '- custom: ' attribute to be a proper template.
+DEBUG:rasa.core.training.generator:Generated trackers will be deduplicated based on their unique last 5 states.
+DEBUG:rasa.core.training.generator:Number of augmentation rounds is 3
+DEBUG:rasa.core.training.generator:Starting data generation round 0 ... (with 1 trackers)
+DEBUG:rasa.core.training.generator:Finished phase (3 training samples found).
+DEBUG:rasa.core.training.generator:Data generation rounds finished.
+DEBUG:rasa.core.training.generator:Found 0 unused checkpoints
+DEBUG:rasa.core.training.generator:Starting augmentation round 0 ... (with 3 trackers)
+DEBUG:rasa.core.training.generator:Finished phase (12 training samples found).
+DEBUG:rasa.core.training.generator:Starting augmentation round 1 ... (with 12 trackers)
+DEBUG:rasa.core.training.generator:Finished phase (39 training samples found).
+DEBUG:rasa.core.training.generator:Starting augmentation round 2 ... (with 20 trackers)
+DEBUG:rasa.core.training.generator:Finished phase (84 training samples found).
+DEBUG:rasa.core.training.generator:Found 84 training trackers.
+DEBUG:rasa.core.training.generator:Subsampled to 81 augmented training trackers.
+DEBUG:rasa.core.training.generator:There are 3 original trackers.
+DEBUG:rasa.core.agent:Agent trainer got kwargs: {}
+DEBUG:rasa.core.featurizers:Creating states and action examples from collected trackers (by MaxHistoryTrackerFeaturizer(SingleStateFeaturizer))...
+DEBUG:rasa.core.featurizers:Created 7 action examples.
+DEBUG:rasa.core.policies.memoization:Memorized 7 unique examples.
+DEBUG:rasa.core.featurizers:Creating states and action examples from collected trackers (by MaxHistoryTrackerFeaturizer(BinarySingleStateFeaturizer))...
+DEBUG:rasa.core.featurizers:Created 79 action examples.
+INFO:rasa.core.policies.keras_policy:Fitting model with 79 total samples and a validation split of 0.2
+DEBUG:rasa.core.policies.policy:Parameters ignored by `model.fit(...)`: {}
+INFO:rasa.core.policies.keras_policy:Done fitting keras policy model
+INFO:rasa.core.agent:Persisted model to '/home/kumpiy02/Documents/RasaProject/RasaDemo/models/core'

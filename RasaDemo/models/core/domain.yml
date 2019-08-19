@@ -1,0 +1,34 @@
+%YAML 1.1
+---
+actions:
+- utter_ask_location
+- utter_goodbye
+- utter_greet
+config:
+  store_entities_as_slots: true
+entities:
+- location
+forms: []
+intents:
+- greet:
+    ignore_entities: []
+    use_entities: true
+- goodbye:
+    ignore_entities: []
+    use_entities: true
+- inform:
+    ignore_entities: []
+    use_entities: true
+slots:
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.TextSlot
+templates:
+  utter_ask_location:
+  - text: In what location?
+  utter_goodbye:
+  - text: Talk to you later
+  - text: Bye Bye :(
+  utter_greet:
+  - text: Hello! How can i help?
